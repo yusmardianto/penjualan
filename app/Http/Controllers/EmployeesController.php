@@ -14,7 +14,8 @@ class EmployeesController extends Controller
      */
     public function index()
     {
-        //
+        $employees = Employees::latest()->paginate(5);
+        return view('employees.index',compact('employees'))->with('i', (request()->input('page', 1) - 1) * 5);;
     }
 
     /**
@@ -24,7 +25,7 @@ class EmployeesController extends Controller
      */
     public function create()
     {
-        //
+        return view('employees.create');
     }
 
     /**
@@ -80,6 +81,6 @@ class EmployeesController extends Controller
      */
     public function destroy(Employees $employees)
     {
-        //
+        //https://magecomp.com/blog/crud-operation-laravel-8/
     }
 }

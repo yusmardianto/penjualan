@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('key');
             $table->string('value');
-            $table->unsignedBigInteger('references_id');
-            $table->foreign('references_id')->references('id')->on('references');
+            // $table->unsignedBigInteger('references_id');
+            // $table->foreign('references_id')->references('id')->on('references');
             $table->timestamps();
         });
     }

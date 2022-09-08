@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('employees_id');
             $table->foreign('employees_id')->references('id')->on('employees');
             $table->date('date');
-            $table->timestamps('time_started');
-            $table->timestamps('time_ended');
+            $table->string('time_started');
+            $table->string('time_ended');
             $table->timestamps();
         });
     }

@@ -294,11 +294,11 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Dashboard</h1>
+      <h1>Employees</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active">Dashboard</li>
+          <li class="breadcrumb-item active">Employees</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
@@ -328,7 +328,7 @@
                 </div>
 
                 <div class="card-body">
-                  <h5 class="card-title">Recent Sales <span>| Today</span></h5>
+                  <h5 class="card-title">Data Employees <span>| All</span></h5>
 
                   <table class="table table-borderless datatable">
                     <thead>
@@ -342,21 +342,6 @@
                         <th scope="col">Aksi</th>
                       </tr>
                     </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row"><a href="#">#2457</a></th>
-                        <td>Brandon Jacob</td>
-                        <td><a href="#" class="text-primary">At praesentium minu</a></td>
-                        <td>$64</td>
-                        <td>$64</td>
-                        <td>$64</td>
-                        <td>
-                            <button type="button" class="btn btn-success">Detail</button>
-                            <button type="button" class="btn btn-danger">Edit</button>
-                            <button type="button" class="btn btn-warning">Delete</button>
-                        </td>
-                      </tr>
-                    </tbody>
                   </table>
 
                 </div>
