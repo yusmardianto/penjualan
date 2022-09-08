@@ -311,43 +311,57 @@
           <div class="row">
 
             <!-- Recent Sales -->
-            <div class="col-12">
-              <div class="card recent-sales overflow-auto">
+            <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Create New Employees</h5>
 
-                <div class="filter">
-                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                    <li class="dropdown-header text-start">
-                      <h6>Filter</h6>
-                    </li>
-
-                    <li><a class="dropdown-item" href="#">Today</a></li>
-                    <li><a class="dropdown-item" href="#">This Month</a></li>
-                    <li><a class="dropdown-item" href="#">This Year</a></li>
-                  </ul>
+              <!-- Floating Labels Form -->
+              <form class="row g-3" action="{{ route('employees.store') }}" method="POST">
+              @csrf
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="name" placeholder="Your Email">
+                    <label for="name">Employee Name</label>
+                  </div>
                 </div>
-
-                <div class="card-body">
-                  <h5 class="card-title">Data Employees <span>| All</span></h5>
-
-                  <table class="table table-borderless datatable">
-                    <thead>
-                      <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Sallary</th>
-                        <th scope="col">Date Overtime</th>
-                        <th scope="col">Time Start</th>
-                        <th scope="col">Time Ended</th>
-                        <th scope="col">Aksi</th>
-                      </tr>
-                    </thead>
-                  </table>
-
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="salary" placeholder="Employee Salary">
+                    <label for="salary">Employee Salary</label>
+                  </div>
                 </div>
+                <div class="col-md-4">
+                  <div class="col-md-12">
+                    <div class="form-floating">
+                      <input type="date" class="form-control" id="date-overtime" placeholder="Date Overtime">
+                      <label for="date-overtime">Date Overtime</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-floating mb-3">
+                    <div class="form-floating">
+                      <input type="time" class="form-control" id="start-overtime" placeholder="Start Overtime">
+                      <label for="start-overtime">Start Overtime</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-floating mb-3">
+                    <div class="form-floating">
+                      <input type="time" class="form-control" id="ended-overtime" placeholder="Ended Overtime">
+                      <label for="ended-overtime">Ended Overtime</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-left">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="reset" class="btn btn-secondary">Reset</button>
+                </div>
+              </form><!-- End floating Labels Form -->
 
-              </div>
-            </div><!-- End Recent Sales -->
+            </div>
+          </div>
 
           </div>
         </div><!-- End Left side columns -->

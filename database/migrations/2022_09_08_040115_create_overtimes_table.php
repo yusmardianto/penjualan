@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('overtimes', function (Blueprint $table) {
             $table->id();
             $table->string('employees_id');
-            $table->foreign('employees_id')->references('id')->on('employees');
+            // $table->foreign('employees_id')->references('id')->on('employees');
             $table->date('date');
             $table->string('time_started');
             $table->string('time_ended');

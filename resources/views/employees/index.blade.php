@@ -329,7 +329,7 @@
 
                 <div class="card-body">
                   <h5 class="card-title">Data Employees <span>| All</span></h5>
-
+                  <a class="btn btn-success" href="{{ route('employees.create') }}"> Create New user</a>                            
                   <table class="table table-borderless datatable">
                     <thead>
                       <tr>
@@ -343,18 +343,18 @@
                       </tr>
                     </thead>
                     <tbody>
-                      @foreach ($employees as $aaaaa)
+                      @foreach ($employees as $employee)
                       <tr>
-                        <th scope="row"><a href="#">{{ $aaaaa->id }}</a></th>
-                        <td>{{ $aaaaa->name }}b</td>
-                        <td><a href="#" class="text-primary">{{ $aaaaa->salary }}</a></td>
+                        <th scope="row"><a href="#">{{ $employee->id }}</a></th>
+                        <td>{{ $employee->name }}b</td>
+                        <td><a class="text-primary">{{ $employee->salary }}</a></td>
                         <td>$64</td>
                         <td>$64</td>
                         <td>$64</td>
                         <td>
-                            <a class="btn btn-success" href="{{ route('employees.create') }}"> Create New user</a>                            <button type="button" class="btn btn-success">Detail</button>
-                            <a type="button" class="btn btn-danger">Edit</a>
-                            <a type="button" class="btn btn-warning">Delete</a>
+                            <a href="{{ route('employees.detail') }}" class="btn btn-success">Detail</a>
+                            <a class="btn btn-danger">Edit</a>
+                            <a class="btn btn-warning">Delete</a>
                         </td>
                       </tr>
                       @endforeach

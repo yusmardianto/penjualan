@@ -36,7 +36,15 @@ class EmployeesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'salary' => 'required',
+        ]);
+    
+        Employees::create($request->all());
+     
+        return redirect()->route('employees.create')
+                        ->with('success','User created successfully.');
     }
 
     /**
@@ -47,7 +55,7 @@ class EmployeesController extends Controller
      */
     public function show(Employees $employees)
     {
-        //
+        return view('employees.detail',compact('employees'));
     }
 
     /**
@@ -81,6 +89,6 @@ class EmployeesController extends Controller
      */
     public function destroy(Employees $employees)
     {
-        //https://magecomp.com/blog/crud-operation-laravel-8/
+        //
     }
 }
