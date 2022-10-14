@@ -18,5 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('employees', EmployeesController::class);
-Route::post('/employees/create', 'EmployeesController@store');
+Route::resource('penjualan', EmployeesController::class);
+Route::any('penjualan/ajax-list', 'EmployeesController@ajaxList');
+Route::get('penjualan/create', 'EmployeesController@create');
+Route::post('penjualan/create', 'EmployeesController@store');
+Route::get('penjualan/detail/{id}', 'EmployeesController@show');
